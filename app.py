@@ -12,19 +12,10 @@ def recommend(movie):
         recommended.append(movies.iloc[i[0]].title)
     return recommended
 
-# with open('similarity.pkl') as sim:
-#     similarity=pickle.load(sim)
-# with open("movie_dict.pkl") as tim:
-# #     movies_dict=pickle.load(tim)
-# similarity=pickle.load(open('similarity.pkl','rb'))
-# movies_dict=pickle.load(open('movie_dict.pkl','rb'))
-# file = open('similarity.pkl', 'rb')
-# similarity = pickle.load(file)
-# file.close()
 
-# file = open('movie_dict.pkl', 'rb')
-# movie_dict = pickle.load(file)
-# file.close()
+similarity=pickle.load(open('similarity.pkl','rb'))
+movies_dict=pickle.load(open('movie_dict.pkl','rb'))
+
 with gzip.open('similarity.pkl', 'rb') as ifp:
     similarity=pickle.load(ifp)
 with gzip.open('movie_dict.pkl', 'rb') as ifp:
