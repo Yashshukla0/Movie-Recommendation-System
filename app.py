@@ -16,10 +16,7 @@ def recommend(movie):
 similarity=pickle.load(open('similarity.pkl','rb'))
 movies_dict=pickle.load(open('movie_dict.pkl','rb'))
 
-with gzip.open('similarity.pkl', 'rb') as ifp:
-    similarity=pickle.load(ifp)
-with gzip.open('movie_dict.pkl', 'rb') as ifp:
-    movie_dict=pickle.load(ifp)
+
 
 
 movies=pd.DataFrame(movies_dict)
