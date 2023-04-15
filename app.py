@@ -15,10 +15,10 @@ def recommend(movie):
 #     similarity=pickle.load(sim)
 # with open("movie_dict.pkl") as tim:
 #     movies_dict=pickle.load(tim)
-similarity=pickle.loads(open('similarity','rb'))
-movies_dict=pickle.loads(open('movie_dict','rb'))
-file = open('similarity.pkl', 'rb')
-similarity = pickle.load(file)
+similarity=pickle.loads(open('similarity.pkl','rb'))
+movies_dict=pickle.loads(open('movie_dict.pkl','rb'))
+# file = open('similarity.pkl', 'rb')
+# similarity = pickle.load(file)
 # file.close()
 
 # file = open('movie_dict.pkl', 'rb')
