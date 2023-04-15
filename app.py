@@ -10,8 +10,9 @@ def recommend(movie):
     for i in movie_list:
         recommended.append(movies.iloc[i[0]].title)
     return recommended
+with open('similarity.pkl') as similarity:
 
-similarity=pickle.load(open('similarity.pkl','rb'))
+# similarity=pickle.load(open('similarity.pkl','rb'))
 movies_dict=pickle.load(open('movie_dict.pkl','rb'))
 movies=pd.DataFrame(movies_dict)
 
