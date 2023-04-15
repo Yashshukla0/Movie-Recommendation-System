@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import gzip
 
 def recommend(movie):
     movie_idx=movies[movies['title']==movie].index[0]
@@ -14,9 +15,9 @@ def recommend(movie):
 # with open('similarity.pkl') as sim:
 #     similarity=pickle.load(sim)
 # with open("movie_dict.pkl") as tim:
-#     movies_dict=pickle.load(tim)
-similarity=pickle.load(open('similarity.pkl','rb'))
-movies_dict=pickle.load(open('movie_dict.pkl','rb'))
+# #     movies_dict=pickle.load(tim)
+# similarity=pickle.load(open('similarity.pkl','rb'))
+# movies_dict=pickle.load(open('movie_dict.pkl','rb'))
 # file = open('similarity.pkl', 'rb')
 # similarity = pickle.load(file)
 # file.close()
@@ -24,6 +25,11 @@ movies_dict=pickle.load(open('movie_dict.pkl','rb'))
 # file = open('movie_dict.pkl', 'rb')
 # movie_dict = pickle.load(file)
 # file.close()
+with gzip.open('similarity.pkl', 'rb') as ifp:
+    similarity=pickle.load(ifp)
+with gzip.open('movie_dict.pkl', 'rb') as ifp:
+    movie_dict=pickle.load(ifp)
+
 
 movies=pd.DataFrame(movies_dict)
 
