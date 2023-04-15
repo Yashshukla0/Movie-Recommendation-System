@@ -1,7 +1,6 @@
 nltk 
 scikit-learn
 pandas
-warnings
 numpy
 ast
 pickle
