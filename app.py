@@ -13,8 +13,8 @@ def recommend(movie):
     return recommended
 
 
-similarity=pickle.load(open('similarity.pkl','rb'))
-movies_dict=pickle.load(open('movie_dict.pkl','rb'))
+similarity=pickle.load(open('similarity.pkl',mode='rb'))
+movies_dict=pickle.load(open('movie_dict.pkl',mode='rb'))
 
 
 
